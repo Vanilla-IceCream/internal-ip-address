@@ -1,0 +1,48 @@
+{
+  "name": "private-ip-address",
+  "version": "1.0.0",
+  "description": "Get your private IP address.",
+  "main": "./dist/private-ip-address.cjs",
+  "module": "./dist/private-ip-address.js",
+  "types": "./dist/src/private-ip-address.d.ts",
+  "type": "module",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/src/private-ip-address.d.ts",
+        "default": "./dist/private-ip-address.js"
+      },
+      "require": {
+        "types": "./dist/src/private-ip-address.d.ts",
+        "default": "./dist/private-ip-address.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "lint": "biome check --apply ./src",
+    "test": "vitest run --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vanilla-IceCream/private-ip-address.git"
+  },
+  "keywords": ["private", "ip", "address"],
+  "author": "Vanilla IceCream",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vanilla-IceCream/private-ip-address/issues"
+  },
+  "homepage": "https://github.com/Vanilla-IceCream/private-ip-address#readme",
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
+    "@types/node": "^20.12.12",
+    "@vitest/coverage-v8": "^1.6.0",
+    "rollup-plugin-node-externals": "^7.1.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^1.6.0"
+  }
+}
